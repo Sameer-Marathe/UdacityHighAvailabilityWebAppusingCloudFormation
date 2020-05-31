@@ -1,8 +1,44 @@
+Description: >
+  Sameer Marathe / Deploying Udacity project 2
+  This script entails everything to create our cloud infrastructure in AWS. You can refer to the "UdacityP2.pdf" 
+  for network infrastructure flow
+
 Parameters:
   # Paramenters are entirely optional.
   # but using them will make your cloudformation templates more reusable
   # use them for things that may change over time, such as instance type,
   # VPCs and so on.
+  EnvironmentName:
+    Description: An Environment name that will be prefixed to each resource.
+    Type: String
+    Default: UdacityProject
+
+  VPCCIDR:
+    Description: A range of IP address (CIDR Notation)
+    Type: String
+    Default: 10.0.0.0/16
+
+  PublicSubnet1CIDR:
+    Description: A range of IP address (CIDR Notation)
+    Type: String
+    Default: 10.0.0.0/24
+
+
+  PublicSubnet2CIDR:
+    Description: A range of IP address (CIDR Notation)
+    Type: String
+    Default: 10.0.1.0/24
+
+  PrivateSubnet1CIDR:
+    Description: A range of IP address (CIDR Notation)
+    Type: String
+    Defualt: 10.0.2.0/24
+
+  PrivateSubnet2CIDR:
+    Description: A range of IP address (CIDR Notation)
+    Type: String
+    Default: 10.0.3.0/24
+
 Resources:
   # instace profile contains the IAM Role name(s) that we want to associate to our auto scaling EC2 Servers
   # never give too much permissions to your EC2 instances! if they get hacked, the permissions get hacked also!
