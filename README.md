@@ -31,5 +31,3 @@ There will be two parts to this project:
 ./delete.sh infra infrastructure.yml infra-parameters.json
 ./delete.sh temps server-infra.yml server-parameters.json
 ```
-### Web-App link
-http://temps-webap-27ps5sfw84rd-454804646.us-west-2.elb.amazonaws.com/
